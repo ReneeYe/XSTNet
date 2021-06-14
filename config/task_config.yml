@@ -1,0 +1,28 @@
+task.class: cross_modal_translation
+task.params:
+  audio_feature_dim: 1
+  text_data_pipeline.class: TaggedTextDataPipeline
+  text_data_pipeline.params:
+    language: en
+    subtokenizer: spm
+    subtokenizer_codes: SPM_SUBTOKENIZER.model
+    vocab_path: SPM_SUBTOKENIZER.vocab
+    glossaries: ['<en>', '<TRG_LANG>', '<audio>']
+
+  batch_by_frames: True
+  audio_batch_size: 12000000
+
+  batch_by_tokens: True
+  text_batch_size: 8000
+
+  max_audio_src_len: 480240
+  max_audio_trg_len: 150
+  batch_bucket_min_audio_src_len: 10000
+  experimental_frame_transcript_ratio: 1920
+
+  max_text_src_len: 120
+  max_text_trg_len: 150
+  batch_bucket_min_text_src_len: 120
+
+  truncate_src: True
+  truncate_tgt: True

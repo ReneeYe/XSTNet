@@ -1,0 +1,23 @@
+dataset.class: ParallelTextDataset
+dataset.params:
+  src_file: TRANSCRIPT_PATH/SUBSET.en.txt
+  trg_file: TRANSCRIPT_PATH/SUBSET.TGT_LANG.txt
+  data_is_processed: False
+
+task.class: seq2seq
+task.params:
+  src_data_pipeline.class: TaggedTextDataPipeline
+  src_data_pipeline.params:
+    language: en
+    subtokenizer: spm
+    subtokenizer_codes: VOCAB_PATH/en-TGT_LANG-spm_10000.model
+    vocab_path: VOCAB_PATH/en-TGT_LANG-spm_10000.vocab
+    glossaries: ['<en>', '<TGT_LANG>', '<audio>']
+
+  trg_data_pipeline.class: TaggedTextDataPipeline
+  trg_data_pipeline.params:
+    language: TGT_LANG
+    subtokenizer: spm
+    subtokenizer_codes: VOCAB_PATH/en-TGT_LANG-spm_10000.model
+    vocab_path: VOCAB_PATH/en-TGT_LANG-spm_10000.vocab
+    glossaries: ['<en>', '<TGT_LANG>', '<audio>']

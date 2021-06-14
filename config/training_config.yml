@@ -1,0 +1,27 @@
+entry.class: trainer
+entry.params:
+  train_steps: 500000
+  save_checkpoint_steps: 1000
+  summary_steps: 200
+  criterion.class: label_smoothed_cross_entropy
+  criterion.params:
+    label_smoothing: 0.1
+  optimizer.class: adam
+  optimizer.params:
+    epsilon: 1.e-9
+    beta_1: 0.9
+    beta_2: 0.98
+  lr_schedule.class: noam
+  lr_schedule.params:
+    initial_factor: 0.7
+    end_factor: 0.7
+    dmodel: 512
+    warmup_steps: 25000
+    start_decay_at: 25000
+    decay_steps: 10000
+  experimental_count_batch_num: False
+  pretrain_model:
+    - path: WAV2VEC2_MODEL_PATH
+      model_name: "fairseq_wav2vec2"
+      from_prefix: "wav2vec2"
+      to_prefix: "cross_modal_transformer/wav2vec2"

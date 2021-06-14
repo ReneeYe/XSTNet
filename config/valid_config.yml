@@ -1,0 +1,27 @@
+entry.class: validation
+
+validator.class: SeqGenerationValidator
+validator.params:
+  eval_dataset: CrossModalMultipleDataset
+  eval_dataset.params:
+    shuffle_dataset: False
+    xm_multiple_datasets:
+      mustc_valid-ST:
+        data_path: VALID_AUDIO_TFRECORD_PATH
+        src_key: audio
+        tgt_key: translation
+
+  eval_batch_size: 16
+  eval_start_at: 0
+  eval_steps: 500
+  eval_criterion: label_smoothed_cross_entropy
+  eval_search_method: beam_search
+  eval_search_method.params:
+    beam_size: 4
+    length_penalty: -1
+    maximum_decode_length: 180
+
+  eval_metric: bleu
+  eval_top_checkpoints_to_keep: 10
+  eval_auto_average_checkpoints: True
+

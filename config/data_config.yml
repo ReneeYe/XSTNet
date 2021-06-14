@@ -1,0 +1,23 @@
+dataset.class: CrossModalMultipleDataset
+dataset.params:
+  shuffle_dataset: True
+  xm_multiple_datasets:
+    mustc-ST:
+      data_path: TRAIN_AUDIO_TFRECORD_PATH
+      src_key: audio
+      tgt_key: translation
+
+    mustc-ASR:
+      data_path: TRAIN_AUDIO_TFRECORD_PATH
+      src_key: audio
+      tgt_key: transcript
+
+    mustc-MT:
+      data_path: TRAIN_TRANSCRIPT_TRANSLATION_TFRECORD_PATH
+      src_key: feature
+      tgt_key: label
+
+    extra_mt-MT:
+      data_PATH: TRAIN_EXTERNAL_MT_TFRECORD_PATH
+      src_key: feature
+      tgt_key: label

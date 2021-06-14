@@ -1,0 +1,37 @@
+model.class: XSTNet
+model.params:
+  wav2vec2_params: wav2vec2_base
+  transformer_params:
+    encoder.attention_dropout_rate: 0.15
+    encoder.attention_type: dot_product
+    encoder.ffn_activation: relu
+    encoder.ffn_dropout_rate: 0.1
+    encoder.filter_size: 2048
+    encoder.hidden_size: 512
+    encoder.layer_postprocess_dropout_rate: 0.15
+    encoder.num_attention_heads: 8
+    encoder.num_layers: 6
+    encoder.post_normalize: false
+
+    decoder.attention_dropout_rate: 0.15
+    decoder.attention_type: dot_product
+    decoder.ffn_activation: relu
+    decoder.ffn_dropout_rate: 0.1
+    decoder.filter_size: 2048
+    decoder.hidden_size: 512
+    decoder.layer_postprocess_dropout_rate: 0.1
+    decoder.num_attention_heads: 8
+    decoder.num_layers: 6
+    decoder.post_normalize: false
+
+    modality.dim: 512
+    modality.share_embedding_and_softmax_weights: true
+    modality.share_source_target_embedding: false
+    modality.timing: sinusoids
+  audio_conv.kernel_size: [5, 5]
+  audio_conv.strides: [2, 2]
+  audio_conv.channels: 512
+  audio_conv.layer_norm: False
+  audio_conv.dropout: 0.0
+  modality.audio.timing: sinusoids
+  modality.text.timing: sinusoids

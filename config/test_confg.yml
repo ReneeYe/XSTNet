@@ -1,0 +1,17 @@
+entry: predict
+batch_size: 10
+search_method: beam_search
+search_method.params:
+  beam_size: 10
+  length_penalty: -1
+  maximum_decode_length: 150
+metric: bleu
+
+dataset.class: CrossModalMultipleDataset
+dataset.params:
+  shuffle_dataset: False
+  xm_multiple_datasets:
+    mustc_test-ST:
+      data_path: TEST_AUDIO_TFRECORD_PATH
+      src_key: audio
+      tgt_key: translation
