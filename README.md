@@ -34,19 +34,19 @@ We report both **case-sensitive detokenized BLEU** and **case-insensitive tokeni
 |XSTNet	     |               21.5              |               19.5              |
 
 ## Trained Checkpoints
-We offer the checkpoints of XSTNet.
+We offer the SentencePiece-token vocabulary, checkpoints of XSTNet (base and expand version), and the TFRecord of the test data.
 
-| Datasets |  Vocab  | Model Checkpoint |
-|:--------:|:-------:|:------:|
-| En-De    | download  |  download  |
-| En-Es    | download  |  download  |
-| En-Fr    | download  |  download  |
-| En-It    | download  |  download  |
-| En-Nl    | download  |  download  |
-| En-Pt    | download  |  download  |
-| En-Ro    | download  |  download  |
-| En-Ro    | download  |  download  |
-|LibriTrans| download  |  download  |
+| **Datasets** |  **Vocab**  | **Model Checkpoints** | **Test Data TFRecord** |
+|:--------:|:-------:|:----------:| :--------:|
+| En-De    | [Download](http://sf3-ttcdn-tos.pstatp.com/obj/nlp-opensource/interspeech2021/xstnet/mustc_en-de/vocab.zip)  |  [Base](http://sf3-ttcdn-tos.pstatp.com/obj/nlp-opensource/interspeech2021/xstnet/mustc_en-de/xstnet_base.zip); [Expand](http://sf3-ttcdn-tos.pstatp.com/obj/nlp-opensource/interspeech2021/xstnet/mustc_en-de/xstnet_expand.zip)  | [Download](http://sf3-ttcdn-tos.pstatp.com/obj/nlp-opensource/interspeech2021/xstnet/mustc_en-de/tst-COMMON.tfrecords-00000-of-00001) |
+| En-Es    | [Download](http://sf3-ttcdn-tos.pstatp.com/obj/nlp-opensource/interspeech2021/xstnet/mustc_en-es/vocab.zip)  |  [Base](http://sf3-ttcdn-tos.pstatp.com/obj/nlp-opensource/interspeech2021/xstnet/mustc_en-es/xstnet_base.zip); [Expand](http://sf3-ttcdn-tos.pstatp.com/obj/nlp-opensource/interspeech2021/xstnet/mustc_en-es/xstnet_expand.zip)  | [Download](http://sf3-ttcdn-tos.pstatp.com/obj/nlp-opensource/interspeech2021/xstnet/mustc_en-es/tst-COMMON.tfrecords-00000-of-00001) |
+| En-Fr    | [Download](http://sf3-ttcdn-tos.pstatp.com/obj/nlp-opensource/interspeech2021/xstnet/mustc_en-fr/vocab.zip)  |  [Base](http://sf3-ttcdn-tos.pstatp.com/obj/nlp-opensource/interspeech2021/xstnet/mustc_en-fr/xstnet_base.zip); [Expand](http://sf3-ttcdn-tos.pstatp.com/obj/nlp-opensource/interspeech2021/xstnet/mustc_en-fr/xstnet_expand.zip)  | [Download](http://sf3-ttcdn-tos.pstatp.com/obj/nlp-opensource/interspeech2021/xstnet/mustc_en-fr/tst-COMMON.tfrecords-00000-of-00001) |
+| En-It    | [Download](http://sf3-ttcdn-tos.pstatp.com/obj/nlp-opensource/interspeech2021/xstnet/mustc_en-it/vocab.zip)  |  [Base](http://sf3-ttcdn-tos.pstatp.com/obj/nlp-opensource/interspeech2021/xstnet/mustc_en-it/xstnet_base.zip); [Expand](http://sf3-ttcdn-tos.pstatp.com/obj/nlp-opensource/interspeech2021/xstnet/mustc_en-it/xstnet_expand.zip)  | [Download](http://sf3-ttcdn-tos.pstatp.com/obj/nlp-opensource/interspeech2021/xstnet/mustc_en-it/tst-COMMON.tfrecords-00000-of-00001) |
+| En-Nl    | [Download](http://sf3-ttcdn-tos.pstatp.com/obj/nlp-opensource/interspeech2021/xstnet/mustc_en-nl/vocab.zip)  |  [Base](http://sf3-ttcdn-tos.pstatp.com/obj/nlp-opensource/interspeech2021/xstnet/mustc_en-nl/xstnet_base.zip); [Expand](http://sf3-ttcdn-tos.pstatp.com/obj/nlp-opensource/interspeech2021/xstnet/mustc_en-nl/xstnet_expand.zip)  | [Download](http://sf3-ttcdn-tos.pstatp.com/obj/nlp-opensource/interspeech2021/xstnet/mustc_en-nl/tst-COMMON.tfrecords-00000-of-00001) |
+| En-Pt    | [Download](http://sf3-ttcdn-tos.pstatp.com/obj/nlp-opensource/interspeech2021/xstnet/mustc_en-pt/vocab.zip)  |  [Base](http://sf3-ttcdn-tos.pstatp.com/obj/nlp-opensource/interspeech2021/xstnet/mustc_en-pt/xstnet_base.zip); [Expand](http://sf3-ttcdn-tos.pstatp.com/obj/nlp-opensource/interspeech2021/xstnet/mustc_en-pt/xstnet_expand.zip)  | [Download](http://sf3-ttcdn-tos.pstatp.com/obj/nlp-opensource/interspeech2021/xstnet/mustc_en-pt/tst-COMMON.tfrecords-00000-of-00001) |
+| En-Ro    | [Download](http://sf3-ttcdn-tos.pstatp.com/obj/nlp-opensource/interspeech2021/xstnet/mustc_en-ro/vocab.zip)  |  [Base](http://sf3-ttcdn-tos.pstatp.com/obj/nlp-opensource/interspeech2021/xstnet/mustc_en-ro/xstnet_base.zip); [Expand](http://sf3-ttcdn-tos.pstatp.com/obj/nlp-opensource/interspeech2021/xstnet/mustc_en-ro/xstnet_expand.zip)  | [Download](http://sf3-ttcdn-tos.pstatp.com/obj/nlp-opensource/interspeech2021/xstnet/mustc_en-ro/tst-COMMON.tfrecords-00000-of-00001) |
+| En-Ru    | [Download](http://sf3-ttcdn-tos.pstatp.com/obj/nlp-opensource/interspeech2021/xstnet/mustc_en-ru/vocab.zip)  |  [Base](http://sf3-ttcdn-tos.pstatp.com/obj/nlp-opensource/interspeech2021/xstnet/mustc_en-ru/xstnet_base.zip); [Expand](http://sf3-ttcdn-tos.pstatp.com/obj/nlp-opensource/interspeech2021/xstnet/mustc_en-ru/xstnet_expand.zip)  | [Download](http://sf3-ttcdn-tos.pstatp.com/obj/nlp-opensource/interspeech2021/xstnet/mustc_en-ru/tst-COMMON.tfrecords-00000-of-00001) |
+|LibriTrans| [Download](http://sf3-ttcdn-tos.pstatp.com/obj/nlp-opensource/interspeech2021/xstnet/libritrans/vocab.zip)  |  [Base](http://sf3-ttcdn-tos.pstatp.com/obj/nlp-opensource/interspeech2021/xstnet/libritrans/xstnetl_base.zip); [Expand](http://sf3-ttcdn-tos.pstatp.com/obj/nlp-opensource/interspeech2021/xstnet/libritrans/xstnet_expand.zip)   | [Download](http://sf3-ttcdn-tos.pstatp.com/obj/nlp-opensource/interspeech2021/xstnet/libritrans/test.tfrecords-00000-of-00001) |
 
 
 
@@ -73,6 +73,13 @@ bash XSTNet/prepare_data/preprocess_text.sh ${DATA_PATH} ${VOCAB_PATH} ${TGT_LAN
 ``` 
 You can also token extra MT data by yourself.
 
+### Download Wav2vec2.0
+
+Since XSTNet uses [Wav2vec2.0](https://github.com/pytorch/fairseq/blob/master/examples/wav2vec/README.md) as the audio encoder. 
+To train the model, please download the [pre-trained wav2vec2 model](https://dl.fbaipublicfiles.com/fairseq/wav2vec/wav2vec_small.pt),
+and put the model at ```WAV2VEC2_MODEL_PATH```.
+
+
 ### Prepare the configuration files and run training scripts.
 The configuration files are: 
 - [task config](config/task_config.yml): define *cross_modal_translation* task, including the data pipeline, the batch size, etc..
@@ -82,7 +89,7 @@ The configuration files are:
 - [valid config](config/valid_config.yml): define the data for validation and the metric to save the model checkpoints.
 
 We offer the template of the configuration yaml files at [./config/](config). 
-Don't forget to define \*_TFRECORD_PATH, SPM_SUBTOKENIZER.\*, TRG_LANG, etc.
+Don't forget to define ```\*_TFRECORD_PATH```, ```SPM_SUBTOKENIZER.\*```, ```TRG_LANG```, etc.
 
 ```
 cat config/task_config.yml config/model_config.yml config/training_config.yml config/data_config.yml > all_configs.yml
@@ -99,3 +106,4 @@ bash run.sh --entry validation --config_paths config/valid_config.yml --model_di
 bash run --config_paths config/test_config.yml --model_dir ${MODEL_CKPT_PATH}/best_avg
 ```
 add ```--output_file ${RESULT_OUTPUT_PATH}``` if you want to see the generated results.
+We provide both *base* and *expand* versions of XSTNet, as well as *TFRecord* for the test data for a fast re-implementation. you may [download](#Trained Checkpoints) them.
