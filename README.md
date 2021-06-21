@@ -107,3 +107,14 @@ bash run --config_paths config/test_config.yml --model_dir ${MODEL_CKPT_PATH}/be
 ```
 add ```--output_file ${RESULT_OUTPUT_PATH}``` if you want to see the generated results.
 We provide both *base* and *expand* versions of XSTNet, as well as *TFRecord* for the test data for a fast re-implementation. you may [download](#Trained Checkpoints) them.
+
+## Citation
+```
+@InProceedings{ye2021end,
+  author    = {Rong Ye and Mingxuan Wang and Lei Li},
+  booktitle = {Proc. of INTERSPEECH},
+  title     = {End-to-end Speech Translation via Cross-modal Progressive Training},
+  year      = {2021},
+  month     = aug,
+}
+```
