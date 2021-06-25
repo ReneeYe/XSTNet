@@ -29,19 +29,19 @@ makeDirs ${OUT_TRANSCRIPT_PATH}
 echo "=== First pass, collecting transcripts ==="
 
 set -x
-python3 -m bytedseq.cli.extract_audio_transcripts \
+python3 -m neurst.cli.extract_audio_transcripts \
     --dataset MuSTC --extraction train --add_language_tag \
     --input_tarball ${INPUT_TARBALL} \
     --output_transcript_file ${OUT_TRANSCRIPT_PATH}/train.en.txt \
     --output_translation_file  ${OUT_TRANSCRIPT_PATH}/train.${TGT_LANG}.txt &
 
-python3 -m bytedseq.cli.extract_audio_transcripts \
+python3 -m neurst.cli.extract_audio_transcripts \
     --dataset MuSTC --extraction dev --add_language_tag \
     --input_tarball ${INPUT_TARBALL} \
     --output_transcript_file ${OUT_TRANSCRIPT_PATH}/dev.en.txt \
     --output_translation_file  ${OUT_TRANSCRIPT_PATH}/dev.${TGT_LANG}.txt &
 
-python3 -m bytedseq.cli.extract_audio_transcripts \
+python3 -m neurst.cli.extract_audio_transcripts \
     --dataset MuSTC --extraction tst-COMMON --add_language_tag\
     --input_tarball ${INPUT_TARBALL} \
     --output_transcript_file ${OUT_TRANSCRIPT_PATH}/tst-COMMON.en.txt \
@@ -66,7 +66,7 @@ for loopid in $(seq 1 ${LOOP}); do
     echo $start, $end
     for procid in $(seq $start $end); do
         set -x
-        nice -n 10 python3 -m bytedseq.cli.create_tfrecords \
+        nice -n 10 python3 -m neurst.cli.create_tfrecords \
             --processor_id $procid --num_processors $NUM_PROCESSORS \
             --num_output_shards $TOTAL_SHARDS \
             --output_range_begin "$((SHARD_PER_PROCESS * procid))" \
@@ -85,7 +85,7 @@ done
 makeDirs ${OUT_AUDIO_TFRECORD_PATH}/devtest
 for subset in dev tst-COMMON; do
     set -x
-    nice -n 10 python3 -m bytedseq.cli.create_tfrecords \
+    nice -n 10 python3 -m neurst.cli.create_tfrecords \
         --processor_id 0 --num_processors 1 \
         --num_output_shards 1 \
         --output_range_begin 0 \

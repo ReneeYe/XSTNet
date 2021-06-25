@@ -38,7 +38,7 @@ for loopid in $(seq 1 ${LOOP}); do
     echo ${start}, ${end}
     for procid in $(seq ${start} ${end}); do
         set -x
-        nice -n 10 python3 -m bytedseq.cli.create_tfrecords \
+        nice -n 10 python3 -m neurst.cli.create_tfrecords \
             --processor_id ${procid} --num_processors ${NUM_PROCESSORS} \
             --num_output_shards ${TOTAL_SHARDS} \
             --output_range_begin "$((SHARD_PER_PROCESS * procid))" \
@@ -53,7 +53,7 @@ done
 
 makeDirs ${OUT_MT_TFRECORD_PATH}/devtest
 sed -e "s#TRANSCRIPT_PATH#${TRANSCRIPT_PATH}#" -e "s#VOCAB_PATH#${VOCAB_PATH}#" -e "s#TGT_LANG#${TGT_LANG}#"  -e "s#SUBSET#dev#" config/text_data_preprocessing.yml > config_processed.yml
-nice -n 10 python3 -m bytedseq.cli.create_tfrecords \
+nice -n 10 python3 -m neurst.cli.create_tfrecords \
         --processor_id 0 --num_processors 1 \
         --num_output_shards 1 \
         --output_range_begin 0 \
@@ -62,7 +62,7 @@ nice -n 10 python3 -m bytedseq.cli.create_tfrecords \
     --output_template ${OUT_MT_TFRECORD_PATH}/devtest/dev.en-${TGT_LANG}.tfrecords-%5.5d-of-%5.5d
 
 sed -e "s#TRANSCRIPT_PATH#${TRANSCRIPT_PATH}#" -e "s#VOCAB_PATH#${VOCAB_PATH}#" -e "s#TGT_LANG#${TGT_LANG}#"  -e "s#SUBSET#tst-COMMON#" config/text_data_preprocessing.yml > config_processed.yml
-nice -n 10 python3 -m bytedseq.cli.create_tfrecords \
+nice -n 10 python3 -m neurst.cli.create_tfrecords \
         --processor_id 0 --num_processors 1 \
         --num_output_shards 1 \
         --output_range_begin 0 \
