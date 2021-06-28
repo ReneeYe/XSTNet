@@ -52,6 +52,14 @@ We offer the SentencePiece-token vocabulary, checkpoints of XSTNet (base and exp
 
 ## Training a Model
 
+### Install NeurST from Source
+
+```bash
+git clone https://github.com/bytedance/neurst.git
+cd neurst/
+pip3 install -e .
+```
+
 ### Data pre-processing
 
 The data pre-processing is quite similar with [NeurST example on MuST-C](https://github.com/bytedance/neurst/blob/master/examples/speech_to_text/must-c/README.md).
