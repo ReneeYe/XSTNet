@@ -306,6 +306,7 @@ class CrossModalTranslation(Task):
                 ret["tgt_lang"] = [_process_text(data["tgt_text"], "tgt_text")[0]]
                 ret["tgt_text"] = _process_text(data["tgt_text"], "tgt_text")
             else:
+                ret["tgt_lang"] = [_process_lang(lang)]
                 ret["tgt_text"] = [_process_lang(lang)] + _process_text(data["tgt_text"], "tgt_text")
             return ret
 
