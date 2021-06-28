@@ -55,8 +55,8 @@ We offer the SentencePiece-token vocabulary, checkpoints of XSTNet (base and exp
 ### Install NeurST from Source
 
 ```bash
-git clone https://github.com/bytedance/neurst.git
-cd neurst/
+git clone https://github.com/ReneeYe/XSTNet.git
+cd XSTNet/
 pip3 install -e .
 ```
 
